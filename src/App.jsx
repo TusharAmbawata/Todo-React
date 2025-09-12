@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Navbar from './Layouts/Navbar'
 import Homepage from './Section/Homepage'
+import TodoList from './Section/TodoList'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -12,6 +13,7 @@ function App() {
     <>
     <Navbar/>
     <Homepage/>
+    <TodoList/>
     </>
   )
 }
