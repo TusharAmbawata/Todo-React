@@ -7,13 +7,22 @@ import Homepage from './Section/Homepage'
 import TodoList from './Section/TodoList'
 
 function App() {
-  const [count, setCount] = useState(0)
+  let [Todos,setTodos] = useState([
+    {todo:"Todo-1",
+    tittle:"Tittle for Todo-1",
+    description:"Description for Todo-1"},
+
+    {todo:"Todo-2",
+    tittle:"Tittle for Todo-2",
+    description:"Description for Todo-2"},
+
+  ])
 
   return (
     <>
     <Navbar/>
     <Homepage/>
-    <TodoList/>
+    <TodoList todos={Todos}/>
     </>
   )
 }
