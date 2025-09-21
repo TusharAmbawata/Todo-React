@@ -4,6 +4,9 @@ const TodoList = ({ todos }) => {
   return (
     <div className='container py-2'>
       <h2 className='my-3'>Todo's</h2>
+      {todos.length === 0 ? (
+        <p className="text-muted">No todos yet. Add one!</p>
+      ):(
       <div className="d-flex flex-wrap">
       {todos.map((item) =>(
         <div class="card m-3 " style={{ width: "18rem"}}>
@@ -19,6 +22,7 @@ const TodoList = ({ todos }) => {
         </div>
           ))}
           </div>
+      )}
     </div>
   )
 }
