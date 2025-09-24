@@ -9,11 +9,16 @@ import TodoList from './Section/TodoList'
 function App() {
   let [Todos,setTodos] = useState([]);
 
+  const deleteTodo = (index)=>{
+    const updatedTodos = Todos.filter((_,i)=> i !== index);
+    setTodos(updatedTodos);
+  }
+
   return (
     <>
     <Navbar/>
     <Homepage todos={Todos} setTodos={setTodos}/>
-    <TodoList todos={Todos}/>
+    <TodoList todos={Todos} deleteTodo={deleteTodo}/>
     </>
   )
 }
